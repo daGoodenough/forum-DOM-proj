@@ -11,9 +11,16 @@ btn.addEventListener("click", () => {
   let seconds = now.getSeconds();
   let time = `${hours}:${minutes}:${seconds}`
 
+  postCntr = document.createElement('div');
   postP = document.createElement('p');
-  postText = document.createTextNode(`${message} - posted by ${name} @ ${time}`);
+  signedP = document.createElement('p')
+
+  postText = document.createTextNode(`${message}`);
+  signedText = document.createTextNode(`- posted by ${name} @ ${time}`)
 
   postP.appendChild(postText);
-  postDiv.appendChild(postP)
+  signedP.appendChild(signedText);
+  postCntr.appendChild(postP);
+  postCntr.appendChild(signedP);
+  postDiv.appendChild(postCntr);
 })
