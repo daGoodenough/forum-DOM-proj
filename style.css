@@ -1,3 +1,11 @@
 .post {
   margin: 45px;
 }
+
+.delete {
+  text-decoration: underline;
+}
+
+.delete:hover {
+  font-weight: 700;
+}

@@ -13,15 +13,28 @@ btn.addEventListener("click", () => {
 
   postCntr = document.createElement('div');
   postCntr.setAttribute('class', 'post');
+
   postP = document.createElement('p');
   signedP = document.createElement('p')
 
+  let deleteP = document.createElement('p')
+  deleteP.setAttribute('class', 'delete');
+  deleteP.innerHTML = 'delete post'
+
   postText = document.createTextNode(`${message}`);
-  signedText = document.createTextNode(`- posted by ${name} @ ${time}`)
+  signedText = document.createTextNode(`- posted by ${name} @ ${time} `)
 
   postP.appendChild(postText);
   signedP.appendChild(signedText);
+  
   postCntr.appendChild(postP);
   postCntr.appendChild(signedP);
+  postCntr.append(deleteP)
+
   postDiv.appendChild(postCntr);
+
+  deleteP.addEventListener('click', (event) => {
+    event.target.parentElement.remove();
+  })
 })
+
