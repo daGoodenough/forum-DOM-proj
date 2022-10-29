@@ -12,6 +12,7 @@ btn.addEventListener("click", () => {
   let time = `${hours}:${minutes}:${seconds}`
 
   postCntr = document.createElement('div');
+  postCntr.setAttribute('class', 'post');
   postP = document.createElement('p');
   signedP = document.createElement('p')
 
